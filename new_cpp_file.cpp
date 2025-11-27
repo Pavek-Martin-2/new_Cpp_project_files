@@ -75,7 +75,6 @@ out_file_cpp<<s1<<endl; // pole_cpp, o jeden klic min nez je potreba (dala "\n" 
 // uzavreni souboru *.cpp
 out_file_cpp.close();
 
-
 // pole obsahu souboru souboru *.dev
 vector<string> pole_dev = {
 "[Project]",
@@ -148,8 +147,6 @@ pole_dev[2] = "Name=" + nazev;
 pole_dev[53] = "FileName=" + nazev + ".cpp";
 //for (const auto& x2 : pole_dev){cout<<x2<<endl;};
 
-
-
 // zapis do souboru *.dev
 ofstream out_file_dev(cesta_dev);
 if (!out_file_dev){
@@ -157,7 +154,6 @@ cout<<"chyba pri zapisu do souboru "<<'"'<<cesta_dev<<'"'<<endl; // ReadOnly apo
 system("pause");
 exit(1); // chybovej exit 1
 }
-
 
 for (const auto& s2 : pole_dev){
 out_file_dev<<s2<<endl; // pole_dev o jeden klic min nez je potreba (dala "\n" vzdy...) **
@@ -175,5 +171,3 @@ cout<<"klavesou F11 pak projekt prelozite a spustite"<<endl;
 system("pause");
 return 0;
 }
-
-
