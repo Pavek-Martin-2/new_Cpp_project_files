@@ -30,6 +30,7 @@ cin>>nazev; // input nazev
 
 string cesta_cpp = cesta + nazev + ".cpp";
 string cesta_dev= cesta + nazev + ".dev";
+int aa, bb;
 
 /*
 kontrola jesli jiz soubor *.cpp existuje - aby se neprepsal novym prazdnym !
@@ -58,7 +59,8 @@ vector<string> pole_cpp = {
 "" // na konci souboru budou po zapise 2 prazdny radky *
 };
 
-//for (const auto& x1 : pole_cpp){cout<<x1<<endl;};
+size_t d_pole_cpp = pole_cpp.size(); // delka pole pole_cpp do promenne d_dole_cpp
+//cout<<d_pole_cpp<<endl; // 10
 
 // zapis do souboru *.cpp
 ofstream out_file_cpp(cesta_cpp);
@@ -68,12 +70,15 @@ system("pause");
 exit(1); // chybovej exit 1
 }
 
-for (const auto& s1 : pole_cpp){
-out_file_cpp<<s1<<endl; // pole_cpp, o jeden klic min nez je potreba (dala "\n" vzdy...) *
+// zapis pole_cpp do souboru out_file_cpp
+for (aa = 0; aa < d_pole_cpp; aa++ ){
+//cout<<pole_cpp[aa]<<endl;
+out_file_cpp<<pole_cpp[aa]<<endl; // pole_cpp, o jeden klic min nez je potreba (dela "\n" vzdy) *
 }
 
 // uzavreni souboru *.cpp
 out_file_cpp.close();
+
 
 // pole obsahu souboru souboru *.dev
 vector<string> pole_dev = {
@@ -145,7 +150,9 @@ vector<string> pole_dev = {
 pole_dev[1] = "FileName=" + nazev + ".dev";
 pole_dev[2] = "Name=" + nazev;
 pole_dev[53] = "FileName=" + nazev + ".cpp";
-//for (const auto& x2 : pole_dev){cout<<x2<<endl;};
+
+size_t d_pole_dev = pole_dev.size(); // delka pole pole_dev do promenne d_dole_dev
+//cout<<d_pole_dev<<endl; // 62
 
 // zapis do souboru *.dev
 ofstream out_file_dev(cesta_dev);
@@ -155,8 +162,11 @@ system("pause");
 exit(1); // chybovej exit 1
 }
 
-for (const auto& s2 : pole_dev){
-out_file_dev<<s2<<endl; // pole_dev o jeden klic min nez je potreba (dala "\n" vzdy...) **
+
+// zapis pole_dev do souboru out_file_dev
+for (bb = 0; bb < d_pole_dev; bb++ ){
+//cout<<pole_dev[bb]<<endl;
+out_file_dev<<pole_dev[bb]<<endl; // pole_dev, o jeden klic min nez je potreba (dela "\n" vzdy) **
 }
 
 // uzavreni souboru *.dev
@@ -171,3 +181,5 @@ cout<<"klavesou F11 pak projekt prelozite a spustite"<<endl;
 system("pause");
 return 0;
 }
+
+
