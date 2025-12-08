@@ -1,0 +1,8 @@
+seznam rozdilu mezi "C" a "Cpp" verzi souboru *.dev ( prvni "C", druhy "Cpp" )
+
+radek 16 - IsCpp=0                    ;  IsCpp=1
+radek 42 - FileVersion=1.0.0.0        ;  FileVersion=
+radek 49 - ProductVersion=1.0.0.0     ;  ProductVersion=
+radek 54 - FileName=bubble_sort_1.cpp ;  FileName=bubble_sort_1.c
+radek 55 - CompileCpp=0               ;  CompileCpp=1
+
