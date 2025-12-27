@@ -19,12 +19,12 @@ int main(){
 string cesta = "C:\\work\\";
 //string cesta = "C:\\work\\folder\\";
 
-cout<<"utilita vytvori novy prazdny projekt pro Dev C++"<<endl;
+cout<<"utilita vytvori novy prazdny projekt pro Dev C#"<<endl;
 cout<<"soubor "<<'"'<<"*.c"<<'"'<<" a k nemu odpovidajici soubor "<<'"'<<"*.dev"<<'"'<<endl;
-cout<<"bez nutnosti neco slozite nastavovat v samotnem DEV C++"<<endl;
+cout<<"bez nutnosti neco slozite nastavovat v samotnem DEV C#"<<endl;
 cout<<"nazev souboru nesmi obsahovat mezery a specialni znaky"<<endl;
 cout<<"znak mezera nahrazujte znakem podtrzitko"<<endl;
-cout<<endl<<"zadej nazev noveho Dev C++ projektu : ";
+cout<<endl<<"zadej nazev noveho Dev C# projektu : ";
 string nazev;
 cin>>nazev; // input nazev
 
